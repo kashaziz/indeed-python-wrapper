@@ -3,7 +3,7 @@ A Python wrapper for Indeed Job Search API.
 
 ### Prerequisites
 
-- Indeed Publisher API ID, available for free from <a href="https://ads.indeed.com/jobroll/xmlfeed" target="_blank">here</a>
+- Indeed Publisher API ID, available for free from [here](https://ads.indeed.com/jobroll/xmlfeed?target=_blank)
 - Python 3.x
 - BeautifulSoup and Requests library. Use the enclosed requirements.txt to install them.
 
