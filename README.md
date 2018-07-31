@@ -30,3 +30,4 @@ Open indeedapiwrapper.py, add following parameters to fetch job listings through
 The list of jobs will be saved in a CSV file "indeedjobs.csv" in the same directory where the script resides.
 
 ### More Information
+More details in the [blog post here](http://www.kashifaziz.me/indeed-api-python-wrapper.html/).
