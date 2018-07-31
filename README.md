@@ -10,7 +10,7 @@ A Python wrapper for Indeed Job Search API.
 
 ### Usage
 
-Parameters to fetch job listings through Indeed Job Search API:
+Open indeedapiwrapper.py, add following parameters to fetch job listings through Indeed Job Search API:
 - Publisher Id is required
 - To search jobs, either provide query string or combination of location and country code.
 
