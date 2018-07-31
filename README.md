@@ -1,2 +1,32 @@
 # indeed-python-wrapper
-A Python wrapper for Indeed Job Search API
+A Python wrapper for Indeed Job Search API. 
+
+### Prerequisites
+
+- Indeed Publisher API ID, available for free from <a href="https://ads.indeed.com/jobroll/xmlfeed" target="_blank">here</a>
+- Python 3.x
+- BeautifulSoup and Requests library. Use the enclosed requirements.txt to install them.
+
+
+### Usage
+
+Parameters to fetch job listings through Indeed Job Search API:
+- Publisher Id is required
+- To search jobs, either provide query string or combination of location and country code.
+
+```
+    params = {
+        'publisher': "",    # publisher ID (Required)
+        'q': "",            # Job search query
+        'l': "",            # location (city / state)
+        'co': "",           # Country Code
+        'sort': "",         # Sort order, date or relevance
+        'days': ""          # number of days to fetch jobs, maximum is 7 days
+        }   
+```
+
+### Output
+
+The list of jobs will be saved in a CSV file "indeedjobs.csv" in the same directory where the script resides.
+
+### More Information
