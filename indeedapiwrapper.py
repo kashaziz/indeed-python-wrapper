@@ -15,17 +15,6 @@ from random import uniform, choice
 from datetime import datetime
 
 
-def random_user_agent():
-    desktop_agents = ['Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36']
-    desktop_agents += ['Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36']
-    desktop_agents += ['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36']
-    desktop_agents += ['Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/602.2.14 (KHTML, like Gecko) Version/10.0.1 Safari/602.2.14']
-    desktop_agents += ['Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36']
-    desktop_agents += ['Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0']
-
-    return {'User-Agent': choice(desktop_agents), 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'}
-
-
 def writerows(rows, filename, heading=None):
     with open(filename, 'a', encoding='utf-8', newline='\n') as toWrite:
         writer = csv.writer(toWrite)
@@ -112,7 +101,7 @@ def prepare_params(**params):
 def get_total_jobs(indeed_url):
     total_jobs = 0
     try:
-        response = requests.get(indeed_url, headers=random_user_agent())
+        response = requests.get(indeed_url)
         if response.status_code == 200:
             json_data = response.json()
             total_jobs = json_data["totalResults"]
@@ -143,7 +132,7 @@ def get_indeed_job_listings(indeed_url):
 
     jobs = []   
     try:
-        response = requests.get(indeed_url, headers=random_user_agent())
+        response = requests.get(indeed_url)
         if response.status_code == 200:
             json_data = response.json()
             for x in json_data["results"]:
