@@ -14,7 +14,7 @@ Open indeedapiwrapper.py, add following parameters to fetch job listings through
 - Publisher Id is required
 - To search jobs, either provide query string or combination of location and country code.
 
-```
+```python
     params = {
         'publisher': "",    # publisher ID (Required)
         'q': "",            # Job search query
